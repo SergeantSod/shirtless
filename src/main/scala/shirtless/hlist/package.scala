@@ -14,6 +14,6 @@ package object hlist {
   val Empty = new Empty{}
 
   final case class ~:[Head, Tail <: HList](head: Head, tail: Tail) extends HList with ConsesTo[Head ~: Tail]{
-    override def toString = head.toString + " <-: " + tail.toString
+    override def toString = head.toString + " ~: " + tail.toString
   }
 }
