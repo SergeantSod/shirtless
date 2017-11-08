@@ -20,6 +20,7 @@ object Example {
     case class Monkey(name: String, age: Int)
     case class Human(name: String, age: Int)
 
+    //Explicit opt-in is required to define implicits (excuse the pun)
     implicit val c1 = Conversion fromCompanion Human
     implicit val c2 = Conversion fromCompanion Monkey
     implicit val c3 = Conversion fromCompanion Banana
